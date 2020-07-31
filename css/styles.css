@@ -3,6 +3,7 @@ nav{
     top: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.288) !important;
+    z-index: 1;
 }
 .logo{
     width: 40px;
@@ -106,6 +107,15 @@ ul{
     }
 }
 /* the crust section */
+.nav-link{
+    color: black !important;
+}
+#initiallyHidden1, #initiallyHidden2{
+    /* display: none; */
+}
+span{
+    cursor: pointer;
+}
 
 
 
