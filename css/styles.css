@@ -97,6 +97,9 @@ ul{
 .btn-primary{
     width: 50%;
 }
+.no-gutters:hover {
+    background-color: rgba(0, 0, 255, 0.068);
+}
 /* media query to rearrange pizza divs for small screens */
 @media screen and (max-width: 720px) {
     #pizza {
@@ -123,8 +126,12 @@ span{
 .card-body img{
     width: 100%;
     border-radius: 10px;
+    height: 30vh;
 }
-
+.toppings .card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(0, 0, 255, 0.068);
+}
 
 
 
