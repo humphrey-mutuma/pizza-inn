@@ -120,7 +120,10 @@ span{
 .toppings{
  justify-content: space-around;
 }
-
+.card-body img{
+    width: 100%;
+    border-radius: 10px;
+}
 
 
 
