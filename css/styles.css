@@ -133,7 +133,22 @@ span{
     background-color: rgba(0, 0, 255, 0.068);
 }
 /* media quaries to rearrange the toppings on different screens */
-
+@media screen and (max-width: 900px) {
+    #card{
+        width: 45% !important;
+        float: left !important;
+        margin-top: 2vh;
+        padding: 2vh;
+    }
+}
+@media screen and (max-width: 600px) {
+    #card{
+        width: 90% !important;
+        float: left !important;
+        margin-top: 2vh;
+        padding: 2vh;
+    }
+}
 
 
 
