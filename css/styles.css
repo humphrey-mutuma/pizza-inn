@@ -111,7 +111,7 @@ ul{
     color: black !important;
 }
 #initiallyHidden1, #initiallyHidden2{
-    /* display: none; */
+    display: none;
 }
 span{
     cursor: pointer;
