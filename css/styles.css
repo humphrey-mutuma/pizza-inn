@@ -25,7 +25,7 @@ nav{
     color: blue !important;
 }
 /* end of nav styles */
-#section{
+#header{
     background-position: center;
     background-size: cover;
     min-height: 70vh;
@@ -133,15 +133,7 @@ span{
     background-color: rgba(0, 0, 255, 0.068);
 }
 /* media quaries to rearrange the toppings on different screens */
-@media screen and (max-width: 900px) {
-    #card{
-        width: 45% !important;
-        float: left !important;
-        margin-top: 2vh;
-        padding: 2vh;
-    }
-}
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
     #card{
         width: 90% !important;
         float: left !important;
