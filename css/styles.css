@@ -15,7 +15,7 @@ nav{
 .nav-item{
     margin-left: 20px;
 }
-nav-item,li,a{
+.nav-item,li,a{
     color: white !important;
 }
 .dropdown-item{
@@ -116,8 +116,10 @@ ul{
 span{
     cursor: pointer;
 }
-
-
+/* toppings section */
+.toppings{
+ justify-content: space-around;
+}
 
 
 
