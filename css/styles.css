@@ -101,6 +101,11 @@ ul{
 .no-gutters:hover {
     background-color: rgba(0, 0, 255, 0.068);
 }
+.radioButton *{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
 /* media query to rearrange pizza divs for small screens */
 @media screen and (max-width: 720px) {
     #pizza {
