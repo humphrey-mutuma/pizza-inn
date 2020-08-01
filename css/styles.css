@@ -172,16 +172,8 @@ span{
     border: 1px solid blue !important;
     color: black !important;
     background-color: rgba(255, 0, 0, 0.418);
+    z-index: 1;
 }
-
-
-
-
-
-
-
-
-
 
 
 /* footer section */
