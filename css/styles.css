@@ -146,6 +146,11 @@ span{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: rgba(0, 0, 255, 0.021);
 }
+.card-footer{
+    display: flex !important;
+    justify-content: center !important;
+    /* align-items: center !important; */
+}
 /* media quaries to rearrange the toppings on different screens */
 @media screen and (max-width: 750px) {
     #card{
