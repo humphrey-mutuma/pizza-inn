@@ -12,11 +12,11 @@ nav{
     padding: 0px;
 
 }
+nav .nav-link{
+    color: white !important;
+}
 .nav-item{
     margin-left: 20px;
-}
-.nav-item,li,a{
-    color: white !important;
 }
 .dropdown-item{
     color: black !important;
@@ -27,6 +27,7 @@ nav{
 /* end of nav styles */
 #header{
     background-position: center;
+    background-attachment: fixed;
     background-size: cover;
     min-height: 70vh;
 }
@@ -110,6 +111,14 @@ ul{
     }
 }
 /* the crust section */
+article{
+    background-color:rgba(0, 0, 255, 0.116);
+
+}
+article h3,h4{
+    text-align: center;
+    padding: 10px;
+}
 .nav-link{
     color: black !important;
 }
@@ -130,7 +139,7 @@ span{
 }
 .toppings .card:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: rgba(0, 0, 255, 0.068);
+    background-color: rgba(0, 0, 255, 0.021);
 }
 /* media quaries to rearrange the toppings on different screens */
 @media screen and (max-width: 750px) {
@@ -141,20 +150,19 @@ span{
         padding: 2vh;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* the delivery services section */
+.jumbotron{
+    background-color:rgba(0, 0, 255, 0.116) !important;
+}
+/* order button */
+#order{
+    position: fixed;
+    bottom: 7vh;
+    right: 2px;
+    border: 1px solid blue !important;
+    color: black !important;
+    background-color: rgba(255, 0, 0, 0.418);
+}
 
 
 

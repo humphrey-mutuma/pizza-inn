@@ -66,7 +66,7 @@
     <main class="container-fluid ">
         <h2>Order your pizza now</h2>
         <div class="row main-row">
-            <div class="pizza" id="pizza">
+            <div  class="pizza" id="">
                 <div>
                     <h2>Large pizza</h2>
                     <img src="images/large-pizza.png" alt="large pizza" >
@@ -75,12 +75,16 @@
                     <h4>MARGHERITA PIZZA</h4>
                     <P>The sweetest pizza in town, this will definately leave you yearning for more</P>
                     <h5>Price</h5>
-                    <h6>Ksh.</h6>
-                    <h1>1000</h1>
-                    <button class="btn btn-primary">Order now</button>
+                    <h2 class="text-primary"> <span>$ </span> 1000</h2>
+                    <form>
+                        <div class="radio">
+                          <label><input style="zoom: 2.5;" name="pizza" type="radio" value=""></label>
+                        </div>
+                    </form>
+
                 </div>
             </div>
-            <div class="pizza" id="pizza">
+            <div class="pizza" id="">
                 <div>
                     <h2>Medium pizza</h2>
                     <img src="images/medium-pizza.jpg" alt="medium-pizza" >
@@ -89,12 +93,15 @@
                     <h4>PEPPERONI PIZZA</h4>
                     <P>The only of its kind. Buy, if only you have more money to buy some more.</P>
                     <h5>Price</h5>
-                     <h6>Ksh.</h6>
-                    <h1>900</h1>
-                    <button class="btn btn-primary">Order now</button>
+                    <h2 class="text-primary"> <span>$ </span> 900</h2>
+                    <form>
+                        <div class="radio">
+                          <label><input style="zoom: 2.5;" name="pizza" type="radio" value=""></label>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <div class=" pizza" id="pizza">
+            <div class=" pizza" id="">
                 <div>
                     <h2>Small pizza</h2>
                     <img src="images/small-pizza.jpg" alt="small pizza" >
@@ -103,10 +110,13 @@
                     <h4>VEGETARIAN PIZZA</h4>
                     <p>And for the vegetarians, this is the best for you.Too sweet. You will end up eating more than ever before. </p>
                     <h5>Price</h5>
-                    <h6>Ksh.</h6>
-                    <h1>800</h1>
-                    <button class="btn btn-primary">Order now</button>
-                </div>
+                    <h2 class="text-primary"> <span>$ </span> 800</h2>
+                    <form>
+                        <div class="radio">
+                          <label><input style="zoom: 2.5;" name="pizza" type="radio" value=""></label>
+                        </div>
+                    </form>
+                 </div>
             </div>
         </div>
     </main>
@@ -116,7 +126,7 @@
     <div class="row">
         <div class="card text-center" >
             <div class="card-header">
-                <h2> <i>Choose the type of crust you want below</i></h2>
+                <h2> <i>Make your pizza insanely yummy by adding a crust on it.</i></h2>
                 <ul class="nav nav-tabs card-header-tabs">
                     <li class="nav-item">
                         <span class="nav-link active" id="crust">Crispy Crust</span>
@@ -134,13 +144,18 @@
                 <div class="card mb-3">
                     <div class="row no-gutters">
                         <div class="col-md-4">
-                            <img src="images/stuffed-crust.jpg" style="margin: 12px 6px;" height="250px" class="card-img" alt="stuffed crust">
+                            <img src="images/stuffed-crust.jpg" style="margin: 12px 6px;" min-height="250px" class="card-img" alt="stuffed crust">
                             </div>
                             <div class="col-md-8">
                             <div class="card-body">
                             <h3 class="card-title">Crispy Crust</h3>
                             <p class="card-text">Crispy and straight out of the oven--that's the way I like my thin crust pizza. It has a nice crunch to it, and the pizza's toppings shine on their own. You won't get overpowered by a huge piece of  bread at the end of each slice. So, if you judge a pizza by the quality of its toppings, this is the best type of pizza crust for you..</p>
-                            <p class="card-text"><small class="text-muted">Available</small></p>
+                            <p class="card-text text-primary"> $ <b>250</b></p>
+                            <form>
+                                <div class="checkbox">
+                                  <label><input style="zoom: 2;" type="checkbox" value=""></label>
+                                </div>
+                            </form>
                             </div>
                         </div>
                     </div>
@@ -151,14 +166,19 @@
                 <div class="card mb-3">
                     <div class="row no-gutters">
                         <div class="col-md-4">
-                            <img src="images/thin-crust.jpg" style="margin: 12px 6px;" height="250px" class="card-img" alt="stuffed crust">
+                            <img src="images/thin-crust.jpg" style="margin: 12px 6px;" min-height="250px" class="card-img" alt="stuffed crust">
                             </div>
                             <div class="col-md-8">
                             <div class="card-body">
                             <h3 class="card-title"> Stuffed Crust</h3>
                             <p class="card-text">Cheese on cheese on cheese is the perfect way to describe this type of crust. If a four-cheese pizza isn't enough for you, why not stuff some more of it into the crust? The gooey richness fulfills every cheese lover's dream. So if your heaven is a cheese shop, we have the perfect type of crust for you and it's the cheesiest around!.</p>
-                            <p class="card-text"><small class="text-muted">Available</small></p>
-                            </div>
+                            <p class="card-text text-primary"> $ <b> 200</b></p>
+                            <form>
+                                <div class="checkbox">
+                                  <label><input style="zoom: 2;" type="checkbox" value=""></label>
+                                </div>
+                            </form>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -168,13 +188,18 @@
                 <div class="card mb-3">
                     <div class="row no-gutters">
                         <div class="col-md-4">
-                            <img src="images/gluten-Free-crust.jpg" style="margin: 12px 6px;" height="250px" class="card-img" alt="stuffed crust">
+                            <img src="images/gluten-Free-crust.jpg" style="margin: 12px 6px;" min-height="250px" class="card-img" alt="stuffed crust">
                             </div>
                             <div class="col-md-8">
                             <div class="card-body">
                             <h3 class="card-title">Gluten free crust</h3>
                             <p class="card-text">If you are looking for a hearty slice, Sicilian is certainly on the road to deep dish level pizza. It does have a hefty crust to topping ratio, so be prepared. Sicilian crust occupies the no-man's land between thin and thick, but don't question it, just take a huge bite and enjoy! Embrace Sicilian's squareness because it makes the whole pizza experience a bit less messy.  </p>
-                            <p class="card-text"><small class="text-muted">Available</small></p>
+                            <p class="card-text text-primary"> $ <b> 150</b></p>
+                            <form>
+                                <div class="checkbox">
+                                  <label><input style="zoom: 2;" type="checkbox" value=""></label>
+                                </div>
+                            </form>
                             </div>
                         </div>
                     </div>
@@ -186,6 +211,8 @@
 <br>
 <!-- section to choose the type of toppings -->
 <article class="container-fluid">
+    <h3>Need toppings on your pizza?</h3>
+    <h4>Make your selection here.</h4>
     <div class="row toppings">
          <!-- bacon card -->
         <div id="card" class="card border-default mb-3" style="width: 30%;">
@@ -213,7 +240,7 @@
             <div class="card-body text-primary">
                 <img src="images/toppings/mushroom.png"  alt="mushroom" >
                 <hr>
-                <p class="card-text">This earthy topping can be divisive in the kitchen, but many agree that it fits right in on a pizza, and this breakfast recipe is just perfect/p>
+                <p class="card-text">This earthy topping can be divisive in the kitchen, but many agree that it fits right in on a pizza, and this breakfast recipe is just perfect</p>
             </div>
             <div class="card-footer bg-transparent border-default">Footer</div>
         </div>
@@ -247,12 +274,13 @@
            <div class="card-body text-primary">
                <img src="images/toppings/pineaple.png"  alt="pineaple" >
                <hr>
-               <p class="card-text">This earthy topping can be divisive in the kitchen, but many agree that it fits right in on a pizza, and this breakfast recipe is just perfect/p>
+               <p class="card-text">This earthy topping can be divisive in the kitchen, but many agree that it fits right in on a pizza, and this breakfast recipe is just perfect</p>
            </div>
            <div class="card-footer bg-transparent border-default">Footer</div>
        </div>
    </div>
 </article>
+<br>
 <!-- delivery section -->
 <aside class="container">
     <div class="row">
@@ -274,6 +302,8 @@
         </div>
     </div>
 </aside>
+<!-- order button -->
+<button id="order" class="btn btn-default">Order now</button>
     <!-- the footer -->
 <footer class="container-fluid">
     <div class="row">
