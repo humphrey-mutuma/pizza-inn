@@ -341,9 +341,9 @@
             <hr class="my-4">
             <h3>Select your location here ...</h3>
             <div width="40% !important" >
-                <select class="custom-select custom-select-lg mb-4">
-                    <option selected>Open this to select your location</option>
-                    <option value="100">Nairobi CBD <b class="badge badge-pill badge-primary">$ 100</b></option>
+                <select class="custom-select custom-select-lg mb-4 deliveryLocation" id="deliverySelected">
+                    <option value="0" selected >Open this to select your location</option>
+                    <option value="100" >Nairobi CBD </b></option>
                     <option value="200">Nairobi county</option>
                     <option value="300">within 800km from Nairobi</option>
                     <option value="400">Diaspora ( Past 800km from Nairobi)</option>
@@ -361,7 +361,7 @@
             <table class="table table-bordered">
                 <!-- pizza size -->
                 <thead>
-                  <tr>
+                  <tr class="table-primary">
                     <th scope="col">#</th>
                     <th scope="col">Pizza Size</th>
                     <th scope="col">pizza Cost</th>                    
@@ -376,7 +376,7 @@
                 </tbody>
                 <!-- crust -->
                 <thead>
-                    <tr>
+                    <tr class="table-primary">
                       <th scope="col">#</th>
                       <th scope="col">Type of crust</th>
                       <th scope="col">Cost of crust</th>                    
@@ -391,7 +391,7 @@
                   </tbody>
                   <!-- toppings -->
                   <thead>
-                    <tr>
+                    <tr class="table-primary">
                       <th scope="col">#</th>
                       <th scope="col">Toppings</th>
                       <th scope="col">Total Cost</th>                    
@@ -404,9 +404,24 @@
                       <td id="costOfToppings">.........</td>
                     </tr>
                   </tbody>
+                    <!-- Delivery cost -->
+                    <thead>
+                        <tr class="table-primary">
+                          <th scope="col">#</th>
+                          <th scope="col">Delivery place</th>
+                          <th scope="col">Delivery Cost</th>                    
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">4</th>
+                          <td id="deliveryLocation">......</td>
+                          <td id="deliveryCost">.........</td>
+                        </tr>
+                      </tbody>
                    <!-- total cost -->
                    <thead>
-                    <tr>
+                    <tr class="table-success">
                       <th scope="col">Total</th>
                       <th scope="col">Total Cost</th>
                     </tr>
@@ -422,8 +437,6 @@
     </div>
 </aside>
 <!-- order button -->
-<p id="demo">dfzdxc</p>
-
 <button id="order" class="btn btn-default" onclick="myFunction()">Order now</button>
     <!-- the footer -->
 <footer class="container-fluid">
