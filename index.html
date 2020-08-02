@@ -339,16 +339,25 @@
             <p>It will take a maximum of 2 hours for deliveries within Nairobi CBD and 24hours for deliveries within 800 km radius from Nairobi. For the rest, a maximum of 48hours.</p>
             <p>We offer countywide delivery Services.</p>
             <hr class="my-4">
-            <h3>Select your location here ...</h3>
+            <h3>Select your location here </h3>
             <div width="40% !important" >
                 <select class="custom-select custom-select-lg mb-4 deliveryLocation" id="deliverySelected">
-                    <option value="0" selected >Open this to select your location</option>
+                    <option value="0" selected >Open this to select your location ...</option>
                     <option value="100" >Nairobi CBD </b></option>
                     <option value="200">Nairobi county</option>
                     <option value="300">within 800km from Nairobi</option>
                     <option value="400">Diaspora ( Past 800km from Nairobi)</option>
                 </select>
             </div>
+            <!-- delivery place -->
+            <div class="input-group mb-3 myTown">
+                <div class="input-group-prepend">
+                  <button onclick="deliveryPlace()" class="btn btn-outline-secondary" type="button" id="button-addon1">Submit</button>
+                </div>
+                <input id="town" type="text" class="form-control" placeholder="Enter your nearest town ..." aria-label="Example text with button addon" aria-describedby="button-addon1">
+            </div>
+            <p id="townOutput" class="text-danger"></p>
+            <!--  -->
         </div>
     </div>
 </aside>
@@ -358,6 +367,14 @@
 <aside class="container">
     <div class="row receiptMain">
         <div class="jumbotron receipt" id="receipt">
+            <!-- number of pizza to order -->
+            <div class="input-group mb-3 ">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Number of pizza to order </label>
+                  </div>
+                <input id="numberOfPizza" type="number" value="1" class="form-control" placeholder="Enter number of pizza ..." aria-label="Example text with button addon" aria-describedby="button-addon1">
+            </div>
+
             <table class="table table-bordered">
                 <!-- pizza size -->
                 <thead>
@@ -433,13 +450,15 @@
                     </tr>
                   </tbody>
               </table>
-              <button class="btn btn-default" style="border: 1px solid blue;" onclick="myFunction()"><a href="#receipt">Place Order</a></button>
+              <p id="message" class="text-success"></p>
+
+              <button class="btn btn-default" style="border: 1px solid blue;" onclick="myFunction(); myMessage()"><a href="#receipt">Place Order</a></button>
 
         </div>
     </div>
 </aside>
 <!-- order button -->
-<button id="order" class="btn btn-default" onclick="myFunction()"><a href="#receipt">Place Order</a></button>
+<button id="order" class="btn btn-default" onclick="myFunction()"><a href="#receipt">View Order</a></button>
   
     <!-- the footer -->
 <footer class="container-fluid">

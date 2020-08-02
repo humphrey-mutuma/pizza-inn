@@ -103,9 +103,16 @@ $(document).ready(function(){
         // display cost od delivery
         var i = document.getElementById("deliverySelected");
         var myDeliveryCost = parseInt(i.options[i.selectedIndex].value);
-        
+        // number of pizza
+        var numberOfPizza = parseInt(document.getElementById("numberOfPizza").value);
+       
+        //Multiply number of pizza
+        largetotal = largePizza * numberOfPizza;
+        mediumTotal = mediumPizza * numberOfPizza;
+        smallTotal = smallPizza * numberOfPizza ;
         //compile total cost of toppings
-        var pizzaPrice = largePizza + mediumPizza + smallPizza;
+        var myPizzaPrice = largePizza + mediumPizza + smallPizza
+        var pizzaPrice = largetotal + mediumTotal + smallTotal;
         document.getElementById("pizzaCost").innerHTML = "$ "+ pizzaPrice; //append pizza price to the table
         var crustPice = crispyCrust +  stuffedCrust + gluttenCrust;
         document.getElementById("crustCost").innerHTML = "$ "+ crustPice; //append crust price to the table
@@ -113,10 +120,10 @@ $(document).ready(function(){
         document.getElementById("costOfToppings").innerHTML = "$ "+ toppingsPrice; //append toppings price to the table
         var totalCost = pizzaPrice + crustPice + toppingsPrice + myDeliveryCost ; 
         document.getElementById("totalCost").innerHTML = "$ "+ totalCost; //append total price to the table
-        // determine size of pizza 
-        if(pizzaPrice ==1000){
+          // determine size of pizza 
+        if(myPizzaPrice ==1000){
             document.getElementById("pizzaSize").innerHTML = "Large Pizza"
-        }else if(pizzaPrice==900){
+        }else if(myPizzaPrice==900){
             document.getElementById("pizzaSize").innerHTML = "Medium Pizza"
         }else{
             document.getElementById("pizzaSize").innerHTML = "Small Pizza"
@@ -132,22 +139,22 @@ $(document).ready(function(){
         // Determine the selected toppings
         var myBacon,myBasil,myMushroom,myPeppers,myPesto,myPineaple
         if(bacon == 100){
-             myBacon = "Bacon "
+             myBacon = "Bacon, "
         }else {
              myBacon = " "
         }
          if(basil == 90){
-             myBasil = ", Basil "
+             myBasil = " Basil, "
         }else{
              myBasil = " "
         }
          if(mushroom == 80){
-             myMushroom = ", Mushroom ,"
+             myMushroom = "Mushroom, "
         }else {
              myMushroom = " "
         }
          if(peppers == 70){
-             myPeppers = " Peppers "
+             myPeppers = " Peppers, "
         }else {
              myPeppers = " "  
         }
@@ -156,7 +163,7 @@ $(document).ready(function(){
         }else {
             myPesto = " "
         } if(pineaple == 50){
-             myPineaple = " Pineaple"
+             myPineaple = " Pineaple "
         }else {
             myPineaple = " "
         }
@@ -179,3 +186,17 @@ $(document).ready(function(){
             document.getElementById("deliveryLocation").innerHTML = " ";
          }
 } 
+
+// function to return the nearest town for delivery
+
+function deliveryPlace(){
+    var town = document.getElementById("town").value;
+    document.getElementById("townOutput").innerHTML = "Your order will be delivered at " + town;
+    alert("Your order will be delivered at " + town);
+}
+// alert user that the order has been placed
+ function myMessage(){
+    var town = document.getElementById("town").value;
+     document.getElementById("message").innerHTML = "Your order has bee placed. It will be delivered at " + town ;
+     alert("Your order has bee placed. It will be delivered at " + town )
+ }
