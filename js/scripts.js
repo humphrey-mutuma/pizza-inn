@@ -132,40 +132,39 @@ $(document).ready(function(){
         // Determine the selected toppings
         var myBacon,myBasil,myMushroom,myPeppers,myPesto,myPineaple
         if(bacon == 100){
-             myBacon = "Bacon"
+             myBacon = "Bacon "
         }else {
              myBacon = " "
         }
          if(basil == 90){
-             myBasil = ", Basil"
+             myBasil = ", Basil "
         }else{
              myBasil = " "
         }
          if(mushroom == 80){
-             myMushroom = ", Mushroom"
+             myMushroom = ", Mushroom ,"
         }else {
              myMushroom = " "
         }
          if(peppers == 70){
-             myPeppers = ", Peppers"
+             myPeppers = " Peppers "
         }else {
              myPeppers = " "  
         }
         if(pesto == 60){
-             myPesto = ", Pesto"
+             myPesto = " Pesto, "
         }else {
             myPesto = " "
         } if(pineaple == 50){
-             myPineaple = ", Pineaple"
+             myPineaple = " Pineaple"
         }else {
             myPineaple = " "
         }
         var allToppings = myBacon + myBasil + myMushroom + myPeppers + myPesto + myPineaple;
         document.getElementById("typesOfToppings").innerHTML = allToppings;
        
-         
-         document.getElementById("deliveryCost").innerHTML = myDeliveryCost;
-
+        //  The delivery location
+         document.getElementById("deliveryCost").innerHTML = "$ " + myDeliveryCost;
          if(myDeliveryCost == 0){
             document.getElementById("deliveryLocation").innerHTML = "No delivery ";
          }else if(myDeliveryCost == 100){

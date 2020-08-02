@@ -20,30 +20,30 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#aboutUs">About us</a>
+                <a class="nav-link" href="#pizzas">Select pizza</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#services">Service</a>
+                <a class="nav-link" href="#crusts">Select Crust</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#whatWeDo">What we do</a>
+                <a class="nav-link" href="#toppingss">Select Toppings</a>
                 </li>
             </ul>
             <span class="float-right">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown float-right">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolio</a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Location</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
-                    <a class="dropdown-item" href="#projects" >Social media template</a>
-                    <a class="dropdown-item" href="#projects" >Pets webpage </a>
-                    <a class="dropdown-item" href="#projects" >Cookie recipe</a>
-                    <a class="dropdown-item" href="#projects" >Portfolio landing page</a>
+                    <a class="dropdown-item" href="#shortLocation" >Nairobi CBD</a>
+                    <a class="dropdown-item" href="#shortLocation" >Nairobi County </a>
+                    <a class="dropdown-item" href="#shortLocation" >Within 800km from Nairobi</a>
+                    <a class="dropdown-item" href="#shortLocation" >Diaspora </a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact us</a>
+                    <a class="nav-link" href="#receipt">Receipt</a>
                     </li>
             </ul>
             </span>
@@ -63,10 +63,10 @@
          </div>
     </header>
     <!-- main section, the pizza section -->
-    <main class="container-fluid ">
+    <main class="container-fluid " id="pizzas">
         <h2>Order your pizza now</h2>
-        <div class="row main-row">
-            <div  class="pizza" id="">
+        <div class="row main-row" >
+            <div  class="pizza" >
                 <div>
                     <h2>Large pizza</h2>
                     <img src="images/large-pizza.png" alt="large pizza" >
@@ -121,12 +121,12 @@
                  </div>
             </div>
         </div>
-    </main>
-    <br>
+     </main >
+    <br id="crusts">
     <!-- type of crust section -->
 <section class="container">
     <div class="row">
-        <div class="card text-center" >
+        <div class="card text-center"  >
             <div class="card-header">
                 <h2> <i>Make your pizza insanely yummy by adding a crust on it.</i></h2>
                 <ul class="nav nav-tabs card-header-tabs">
@@ -212,10 +212,10 @@
 </section>    
 <br>
 <!-- section to choose the type of toppings -->
-<article class="container-fluid">
+<article class="container-fluid" id="toppingss">
     <h3>Need toppings on your pizza?</h3>
     <h4>Make your selection here.</h4>
-    <div class="row toppings">
+    <div class="row toppings" >
          <!-- bacon card -->
         <div id="card" class="card border-default mb-3" style="width: 30%;">
             <div class="card-header bg-transparent border-default">Bacon</div>
@@ -332,7 +332,7 @@
 </article>
 <br>
 <!-- delivery section -->
-<aside class="container">
+<aside class="container" id="shortLocation">
     <div class="row">
         <div class="jumbotron">
             <h3>Would you like to have your pizza delivered?</h3>
@@ -356,8 +356,8 @@
 <!-- summary section -->
 <hr>
 <aside class="container">
-    <div class="row">
-        <div class="jumbotron">
+    <div class="row receiptMain">
+        <div class="jumbotron receipt" id="receipt">
             <table class="table table-bordered">
                 <!-- pizza size -->
                 <thead>
@@ -433,11 +433,14 @@
                     </tr>
                   </tbody>
               </table>
+              <button class="btn btn-default" style="border: 1px solid blue;" onclick="myFunction()"><a href="#receipt">Place Order</a></button>
+
         </div>
     </div>
 </aside>
 <!-- order button -->
-<button id="order" class="btn btn-default" onclick="myFunction()">Order now</button>
+<button id="order" class="btn btn-default" onclick="myFunction()"><a href="#receipt">Place Order</a></button>
+  
     <!-- the footer -->
 <footer class="container-fluid">
     <div class="row">
