@@ -87,42 +87,104 @@ $(document).ready(function(){
         var bacon = document.getElementById("customCheck1").checked;
         if(bacon === true){
             bacon = 100
+            myBacon = "Bacon"
             // document.getElementById("demo").innerHTML = bacon;
         }
         // price of basil
         var basil = document.getElementById("customCheck2").checked;
         if(basil === true){
             basil = 90
+            myBasil = "Basil"
             // document.getElementById("demo").innerHTML = basil;
         }
         // price of mushroom
         var mushroom = document.getElementById("customCheck3").checked;
         if(mushroom === true){
             mushroom = 80
+            myMushroom = "Mushroom"
             // document.getElementById("demo").innerHTML = mushroom;
         }
         // price of peppers
         var peppers = document.getElementById("customCheck4").checked;
         if(peppers === true){
             peppers = 70
+            myPeppers = "Peppers"
             // document.getElementById("demo").innerHTML = peppers;
         }
         // price of pesto
         var pesto = document.getElementById("customCheck5").checked;
          if(pesto === true){
             pesto = 60
+            myPesto = "Pesto"
             //  document.getElementById("demo").innerHTML = pesto;
          }
         // price of pineaple
         var pineaple = document.getElementById("customCheck6").checked;
         if(pineaple === true){
             pineaple = 50
+            myPineaple = "Pineaple"
             // document.getElementById("demo").innerHTML = pineaple;
         }
         //compile total cost of toppings
         var pizzaPrice = largePizza +mediumPizza +smallPizza;
+        document.getElementById("pizzaCost").innerHTML = "$ "+ pizzaPrice; //append pizza price to the table
         var crustPice = crispyCrust +  stuffedCrust + gluttenCrust;
+        document.getElementById("crustCost").innerHTML = "$ "+ crustPice; //append crust price to the table
         var toppingsPrice = bacon + basil + mushroom + peppers + pesto + pineaple;
+        document.getElementById("costOfToppings").innerHTML = "$ "+ toppingsPrice; //append toppings price to the table
         var totalCost = pizzaPrice + crustPice + toppingsPrice; 
+        document.getElementById("totalCost").innerHTML = "$ "+ totalCost; //append total price to the table
+        // determine size of pizza 
+        if(pizzaPrice ==1000){
+            document.getElementById("pizzaSize").innerHTML = "Large Pizza"
+        }else if(pizzaPrice==900){
+            document.getElementById("pizzaSize").innerHTML = "Medium Pizza"
+        }else{
+            document.getElementById("pizzaSize").innerHTML = "Small Pizza"
+        }
+        // Determine type of crust
+        if(crustPice ==250){
+            document.getElementById("typeOfCrust").innerHTML = " Crispy Crust"
+        }else if(crustPice==200){
+            document.getElementById("typeOfCrust").innerHTML = "Stuffed Crust"
+        }else{
+            document.getElementById("typeOfCrust").innerHTML = "Glutten-free Crust"
+        }
+        // Determine the selected toppings
+        var myBacon,myBasil,myMushroom,myPeppers,myPesto,myPineaple
+        if(bacon == 100){
+             myBacon = "Bacon "
+        }else {
+             myBacon = " "
+        }
+         if(basil == 90){
+             myBasil = "Basil "
+        }else{
+             myBasil = " "
+        }
+         if(mushroom == 80){
+             myMushroom = "Mushroom "
+        }else {
+             myMushroom = " "
+        }
+         if(peppers == 70){
+             myPeppers = "Peppers "
+        }else {
+             myPeppers = " "  
+        }
+        if(pesto == 60){
+             myPesto = "Pesto "
+        }else {
+            myPesto = " "
+        } if(pineaple == 50){
+             myPineaple = "Pineaple "
+        }else {
+            myPineaple = " "
+        }
+        var allToppings = myBacon + myBasil + myMushroom + myPeppers + myPesto + myPineaple;
+        document.getElementById("typesOfToppings").innerHTML = allToppings;
+
+
+
         document.getElementById("demo").innerHTML = totalCost;
     }
