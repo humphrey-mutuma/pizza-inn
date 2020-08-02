@@ -66,7 +66,7 @@
     <main class="container-fluid " id="pizzas">
         <h2>Order your pizza now</h2>
         <div class="row main-row" >
-            <div  class="pizza" >
+            <div  class="pizza" id="pizza">
                 <div>
                     <h2>Large pizza</h2>
                     <img src="images/large-pizza.png" alt="large pizza" >
@@ -84,7 +84,7 @@
                     </span>
                 </div>
             </div>
-            <div class="pizza" id="">
+            <div class="pizza" id="pizza">
                 <div>
                     <h2>Medium pizza</h2>
                     <img src="images/medium-pizza.jpg" alt="medium-pizza" >
@@ -102,7 +102,7 @@
                     </span>
                 </div>
             </div>
-            <div class=" pizza" id="">
+            <div class=" pizza" id="pizza">
                 <div>
                     <h2>Small pizza</h2>
                     <img src="images/small-pizza.jpg" alt="small pizza" >
@@ -367,10 +367,11 @@
 <aside class="container">
     <div class="row receiptMain">
         <div class="jumbotron receipt" id="receipt">
+            <h1><i>Receipt:</i></h1>
             <!-- number of pizza to order -->
             <div class="input-group mb-3 ">
                 <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Number of pizza to order </label>
+                    <label class="input-group-text" for="inputGroupSelect01">Number of pizza to order:</label>
                   </div>
                 <input id="numberOfPizza" type="number" value="1" class="form-control" placeholder="Enter number of pizza ..." aria-label="Example text with button addon" aria-describedby="button-addon1">
             </div>

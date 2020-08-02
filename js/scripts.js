@@ -110,15 +110,20 @@ $(document).ready(function(){
         largetotal = largePizza * numberOfPizza;
         mediumTotal = mediumPizza * numberOfPizza;
         smallTotal = smallPizza * numberOfPizza ;
+        // multiply crust with number of pizza
+        crispyTotal = crispyCrust * numberOfPizza;
+        stuffedTotal = stuffedCrust * numberOfPizza;
+        gluttenTotal = gluttenCrust * numberOfPizza ;
         //compile total cost of toppings
         var myPizzaPrice = largePizza + mediumPizza + smallPizza
         var pizzaPrice = largetotal + mediumTotal + smallTotal;
         document.getElementById("pizzaCost").innerHTML = "$ "+ pizzaPrice; //append pizza price to the table
-        var crustPice = crispyCrust +  stuffedCrust + gluttenCrust;
-        document.getElementById("crustCost").innerHTML = "$ "+ crustPice; //append crust price to the table
+        var crustPrice = crispyCrust +  stuffedCrust + gluttenCrust;
+        var crustTotal = crispyTotal +  stuffedTotal + gluttenTotal;
+        document.getElementById("crustCost").innerHTML = "$ "+ crustTotal; //append crust price to the table
         var toppingsPrice = bacon + basil + mushroom + peppers + pesto + pineaple;
         document.getElementById("costOfToppings").innerHTML = "$ "+ toppingsPrice; //append toppings price to the table
-        var totalCost = pizzaPrice + crustPice + toppingsPrice + myDeliveryCost ; 
+        var totalCost = pizzaPrice + crustTotal + toppingsPrice + myDeliveryCost ; 
         document.getElementById("totalCost").innerHTML = "$ "+ totalCost; //append total price to the table
           // determine size of pizza 
         if(myPizzaPrice ==1000){
@@ -129,9 +134,9 @@ $(document).ready(function(){
             document.getElementById("pizzaSize").innerHTML = "Small Pizza"
         }
         // Determine type of crust
-        if(crustPice ==250){
+        if(crustPrice ==250){
             document.getElementById("typeOfCrust").innerHTML = " Crispy Crust"
-        }else if(crustPice==200){
+        }else if(crustPrice==200){
             document.getElementById("typeOfCrust").innerHTML = "Stuffed Crust"
         }else{
             document.getElementById("typeOfCrust").innerHTML = "Glutten-free Crust"
@@ -172,16 +177,12 @@ $(document).ready(function(){
        
         //  The delivery location
          document.getElementById("deliveryCost").innerHTML = "$ " + myDeliveryCost;
+        //  order location
+         var orderLocation = document.getElementById("town").value;
          if(myDeliveryCost == 0){
-            document.getElementById("deliveryLocation").innerHTML = "No delivery ";
-         }else if(myDeliveryCost == 100){
-            document.getElementById("deliveryLocation").innerHTML = " Nairobi(CBD) ";
-         }else if(myDeliveryCost == 200){
-            document.getElementById("deliveryLocation").innerHTML = " Nairobi County ";
-         }else if(myDeliveryCost == 300){
-            document.getElementById("deliveryLocation").innerHTML = "  Within 800km from Nairobi ";
-         }else if(myDeliveryCost == 400){
-            document.getElementById("deliveryLocation").innerHTML = " Diaspora ";
+            document.getElementById("deliveryLocation").innerHTML = "No delivery selected! ";
+         }else if(myDeliveryCost == 100 || myDeliveryCost == 200 ||myDeliveryCost == 300 ||myDeliveryCost == 400 ){
+            document.getElementById("deliveryLocation").innerHTML = orderLocation;
          }else{
             document.getElementById("deliveryLocation").innerHTML = " ";
          }
@@ -191,12 +192,11 @@ $(document).ready(function(){
 
 function deliveryPlace(){
     var town = document.getElementById("town").value;
-    document.getElementById("townOutput").innerHTML = "Your order will be delivered at " + town;
+    document.getElementById("townOutput").innerHTML = "Your order will be delivered at " + town + " (Cost of delivery is in the receipt )";
     alert("Your order will be delivered at " + town);
 }
 // alert user that the order has been placed
  function myMessage(){
-    var town = document.getElementById("town").value;
-     document.getElementById("message").innerHTML = "Your order has bee placed. It will be delivered at " + town ;
-     alert("Your order has bee placed. It will be delivered at " + town )
+     document.getElementById("message").innerHTML = "Your order has bee placed."
+     alert("Your order has bee placed.")
  }
